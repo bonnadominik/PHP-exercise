@@ -8,7 +8,8 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #2c698d;
+    background: rgb(39,38,67);
+    background: linear-gradient(0deg, rgba(39,38,67,1) 0%, rgba(44,105,141,1) 100%);
     color: #fff;
 }
 
@@ -24,7 +25,7 @@ header h1{
 
 header p{
     padding-top: 5px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 main{
@@ -49,7 +50,7 @@ main form ul li fieldset{
     border: none;
 }
 
-main form ul li input[type=text], form ul li input[type=email], form ul li input[type=password]{
+main form ul li input[type=text], main form ul li input[type=email], main form ul li input[type=password]{
     width: 100%;
     padding: 8px 15px;
     border: none;
@@ -58,4 +59,119 @@ main form ul li input[type=text], form ul li input[type=email], form ul li input
     font-size: 15px;
     outline: none;
     color: #fff;
+}
+
+main form ul li input[type=text]:focus, main form ul li input[type=email]:focus, main form ul li input[type=password]:focus{
+    box-shadow: 0 0 0 2px #bae8e8;
+}
+
+.radio-container{
+    margin-top: 10px;
+}
+
+.radio-container label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-container label .new-radio-button{
+    margin-right: 30px;
+}
+
+.radio-container input[type=radio]{
+    display:none;
+}
+
+.radio-container .new-radio-button::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translateY(1px);
+    background-color: #2c698d;
+    position: absolute;
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    -o-transform: translateY(1px);
+}
+
+.radio-container .new-radio-button::after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bae8e8;
+    position: absolute;
+    opacity: 0;
+    transform: translate(4px, 5px);
+    -webkit-transform: translate(4px, 5px);
+    -moz-transform: translate(4px, 5px);
+    -ms-transform: translate(4px, 5px);
+    -o-transform: translate(4px, 5px);
+}
+
+.radio-container input[type=radio]:checked ~ label .new-radio-button::after{
+    opacity: 1;
+}
+
+.radio-container input[type=radio]:hover ~ label .new-radio-button::after{
+    opacity: 1;
+}
+
+input[type=file]{
+    position: absolute;
+    left: -99999rem;
+}
+
+.custom-file-upload{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #e3f6f5;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+}
+
+form ul li input[type=submit]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #e3f6f5;
+    border: none;
+    outline: 0;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+form ul li input[type=submit]:hover, .custom-file-upload:hover{
+    background-color: #bae8e8;
+    box-shadow: 0 1px 4px rgb(0,0,0);
+}
+
+@media only screen and (min-width: 482px){
+    main{
+        max-width: calc(100% - 60px);
+    }
+}
+
+@media only screen and (min-width: 720px){
+    main{
+        max-width: calc(100% - 200px);
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    main{
+        max-width: 40vw;
+    }
 }
