@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="styles/main.css">
     <script>
         function getFile(){
             document.getElementById("file-upload").click();
         }
     </script>
-    <title>Zadanie zaliczeniowe</title>
+    <title>Rejestracja</title>
 </head>
 <body>
 <header>
@@ -18,44 +17,44 @@
     <p>Wypełnij poniższe dane, a następnie zatwierdź formularz</p>
 </header>
 <main>
-    <form action="index.php" method="post">
+    <form enctype="multipart/form-data" action="registrationData.php" method="POST">
         <ul>
             <li>
                 <label for="name">Imię</label>
-                <input type="text" id="name" name="user_name" placeholder="Wprowadź swoje imię">
+                <input type="text" id="name" name="user-name" placeholder="Wprowadź swoje imię">
             </li>
             <li>
-                <label for="last-name">Nazwisko</label>
-                <input type="text" id="last-name" name="user_last_name" placeholder="Wprowadź swoje nazwisko">
+                <label for="user-last-name">Nazwisko</label>
+                <input type="text" id="user-last-name" name="user-last-name" placeholder="Wprowadź swoje nazwisko">
             </li>
             <li>
                 <fieldset>
                     <legend>Wybierz swoją płeć</legend>
                     <div class="radio-container">
-                        <input type="radio" name="sex" id="man" value="man">
+                        <input type="radio" name="user-sex" id="man" value="Mężczyzna">
                         <label for="man"><span class="new-radio-button"></span>Mężczyzna</label>
                     </div>
                     <div class="radio-container">
-                        <input type="radio" name="sex" id="woman" value="woman">
+                        <input type="radio" name="user-sex" id="woman" value="Kobieta">
                         <label for="woman"><span class="new-radio-button"></span>Kobieta</label>
                     </div>
                 </fieldset>
             </li>
             <li>
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="user_email" placeholder="Wprowadź adres e-mail">
-            </li>
-            <li>
-                <label for="password">Hasło</label>
-                <input type="password" id="password" name="user_password" placeholder="Wprowadź hasło">
+                <input type="email" id="email" name="user-email" placeholder="Wprowadź adres e-mail">
             </li>
             <li>
                 <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
-                <label for="avatar" class="custom-file-upload" onclick="getFile()">Wybierz zdjęcie profilowe</label>
-                <input type="file" name="file-upload" id="file-upload">
+                <label for="file-upload" class="custom-file-upload" onclick="getFile()">Wybierz zdjęcie profilowe</label>
+                <input type="file" name="UPLOADED_FILE" id="file-upload">
             </li>
             <li>
-                <input type="submit" value="Zarejestruj się">
+                <label for="password">Hasło</label>
+                <input type="password" id="password" name="user-password" placeholder="Wprowadź hasło">
+            </li>
+            <li>
+                <input type="submit" value="Zarejestruj się" name="submit">
             </li>
         </ul>
     </form>

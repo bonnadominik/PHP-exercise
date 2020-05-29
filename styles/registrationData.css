@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: rgb(39,38,67);
+    background: linear-gradient(0deg, rgba(39,38,67,1) 0%, rgba(44,105,141,1) 100%);
+    color: #fff;
+}
+
+header{
+    width: 100%;
+    padding: 80px 0 80px;
+    text-align: center;  
+    width: calc(100% - 30px);
+    margin: auto;  
+}
+
+header h1{
+    font-size: 36px;
+}
+
+header p{
+    padding-top: 10px;
+    font-size: 19px;
+}
+
+main{
+    box-sizing: border-box;
+    width: calc(100% - 30px);
+    height: 100%;
+    background-color: #bae8e859;
+    margin: auto;
+    padding: 40px;
+}
+
+main ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+main a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px; 
+    font-size: 16px;
+    background-color: #e3f6f5;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 11px;
+    color: #272643; 
+}
+
+main a:hover{
+    background-color: #bae8e8;
+    box-shadow: 0 1px 4px rgb(0,0,0);
+}
+
+@media only screen and (min-width: 482px){
+    main{
+        max-width: calc(100% - 60px);
+    }
+}
+
+@media only screen and (min-width: 720px){
+    main{
+        max-width: calc(100% - 200px);
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    main{
+        max-width: 40vw;
+    }
+}
