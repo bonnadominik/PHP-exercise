@@ -9,11 +9,11 @@
 body{
     font-family: 'Roboto', sans-serif;
     background: rgb(39,38,67);
-    background: linear-gradient(0deg, rgba(39,38,67,1) 0%, rgba(44,105,141,1) 100%);
     color: #fff;
 }
 
 header{
+    color:#bae8e8;
     width: 100%;
     padding: 80px 0 80px;
     text-align: center;  
@@ -40,27 +40,34 @@ main{
 }
 
 main ul li {
+    font-size: 18px;
     list-style: none;
-    margin-bottom: 10px;
+    margin: 0 0 30px;
+    line-height: 30px;
 }
 
-main a{
+main ul li a{
     text-decoration: none;
     display: inline-block;
     width: 100%;
-    height: 40px;
-    margin-top: 10px; 
+    height: 50px;
+    margin-top: 20px; 
     font-size: 16px;
     background-color: #e3f6f5;
     cursor: pointer;
     text-align: center;
-    padding-top: 11px;
+    padding-top: 10px;
     color: #272643; 
 }
 
-main a:hover{
+
+main ul li a:hover{
     background-color: #bae8e8;
     box-shadow: 0 1px 4px rgb(0,0,0);
+}
+
+.profile-image{
+    font-size: 12px;
 }
 
 @media only screen and (min-width: 482px){

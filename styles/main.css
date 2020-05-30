@@ -9,11 +9,11 @@
 body{
     font-family: 'Roboto', sans-serif;
     background: rgb(39,38,67);
-    background: linear-gradient(0deg, rgba(39,38,67,1) 0%, rgba(44,105,141,1) 100%);
     color: #fff;
 }
 
 header{
+    color:#bae8e8;
     width: 100%;
     padding: 80px 0 80px;
     text-align: center;  
@@ -56,7 +56,7 @@ main form ul li input[type=text], main form ul li input[type=email], main form u
     width: 100%;
     padding: 8px 15px;
     border: none;
-    background-color: #2c698d;
+    background-color: rgb(39,38,67);
     margin-top: 10px;
     font-size: 15px;
     outline: none;
@@ -92,7 +92,7 @@ main form ul li input[type=text]:focus, main form ul li input[type=email]:focus,
     height: 20px;
     border-radius: 50%;
     transform: translateY(1px);
-    background-color: #2c698d;
+    background-color: rgb(39,38,67);
     position: absolute;
     -webkit-transform: translateY(1px);
     -moz-transform: translateY(1px);
