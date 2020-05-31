@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rejestracja</title>
-    <link rel="stylesheet" href="/styles/registrationData.css">
+    <link rel="stylesheet" href="styles/secondary.css">
 </head>
 <body>
     <?php
@@ -66,7 +66,7 @@
                         Wprowadziłeś plik z niepoprawnym rozszerzeniem
                     </li>
                     <li>
-                    <a href="aboutMe.html">Przejdź do strony o mnie</a>
+                    <a href="aboutMe.php">Przejdź do strony o mnie</a>
                     </li>
                         <span>lub</span>
                     <li>
@@ -75,31 +75,31 @@
                 } else {
                     switch ($_FILES['UPLOADED_FILE']['error']) {
                         case 0:
-
                             $newFileName = max($namesOfExistingFiles)+1;
                             $_FILES['UPLOADED_FILE']['name'] = $newFileName.".$extension";
                             move_uploaded_file($_FILES['UPLOADED_FILE']['tmp_name'],__DIR__.$path.$_FILES['UPLOADED_FILE']['name']);
 
                             echo 
-                                '<li>
-                                    Zdjęcie profilowe<br>';
+                            '<li>
+                            Zdjęcie profilowe<br>';
                             echo 
-                                '<div style="
-                                background-image: url(uploads/'.$newFileName.'.'.$extension.');
-                                width: 200px;
-                                height: 200px;
-                                background-position: center; background-size: cover;
-                                margin-top: 10px;
-                                margin-bottom: 10px;"></div>';
+                            '<div style="
+                            background-image: url(uploads/'.$newFileName.'.'.$extension.');
+                            width: 200px;
+                            height: 200px;
+                            background-position: center; background-size: cover;
+                            margin-top: 10px;
+                            margin-bottom: 10px;"></div>';
                             
                             $fileSizeInMegabytes = round($_FILES['UPLOADED_FILE']['size'] / 1048576,2);
                             echo 'Nazwa pliku: '.$_FILES['UPLOADED_FILE']['name'].'<br>';
                             echo 'Typ pliku: '.$_FILES['UPLOADED_FILE']['type'].'<br>';
                             echo 'Rozmiar pliku: '.$fileSizeInMegabytes.' MB</li>';
-
+                            
+                            
                             echo 
                             '<li>
-                                <a href="aboutMe.html">Przejdź do strony o mnie</a>
+                            <a href="aboutMe.php">Przejdź do strony o mnie</a>
                             </li>';
                             
                             break;
@@ -110,7 +110,7 @@
                                     Rozmiar pliku jest zbyt duży
                                 </li>
                                 <li>
-                                    <a href="aboutMe.html">Przejdź do strony o mnie</a>
+                                    <a href="aboutMe.php">Przejdź do strony o mnie</a>
                                 </li>
                                 <span>lub</span>
                                 <li>
@@ -124,7 +124,7 @@
                                     Plik nie został wysłany
                                 </li>
                                 <li>
-                                <a href="aboutMe.html">Przejdź do strony o mnie</a>
+                                <a href="aboutMe.php">Przejdź do strony o mnie</a>
                                 </li>
                                     <span>lub</span>
                                 <li>
@@ -138,7 +138,7 @@
                                     Wystąpił błąd podczas wysyłania pliku na serwer
                                 </li>
                                 <li>
-                                    <a href="aboutMe.html">Przejdź do strony o mnie</a>
+                                    <a href="aboutMe.php">Przejdź do strony o mnie</a>
                                 </li>
                                     <span>lub</span>
                                 <li>

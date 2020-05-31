@@ -39,7 +39,7 @@ main{
     padding: 40px;
 }
 
-main ul li {
+main ul li{
     font-size: 18px;
     list-style: none;
     margin: 0 0 30px;
@@ -60,14 +60,50 @@ main ul li a{
     color: #272643; 
 }
 
-
 main ul li a:hover{
     background-color: #bae8e8;
     box-shadow: 0 1px 4px rgb(0,0,0);
 }
 
-.profile-image{
-    font-size: 12px;
+main ul li span{
+    margin: auto;
+}
+
+main form ul li textarea{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    background-color: rgb(39,38,67);
+    margin-top: 10px;
+    font-size: 15px;
+    outline: none;
+    color: #fff;
+}
+
+form ul li input[type=submit]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #e3f6f5;
+    border: none;
+    outline: 0;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    color: #272643;
+}
+
+form ul li input[type=submit]:hover{
+    background-color: #bae8e8;
+    box-shadow: 0 1px 4px rgb(0,0,0);
+}
+
+main form ul li textarea:focus{
+    box-shadow: 0 0 0 2px #bae8e8;
 }
 
 @media only screen and (min-width: 482px){
